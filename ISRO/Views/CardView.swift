@@ -12,9 +12,7 @@ struct CardView: View {
     let item: NavigationItem
     
     var body: some View {
-        NavigationLink {
-            
-        } label: {
+
             VStack(spacing: 12) {
                 Text(item.title.uppercased())
                     .font(.title3)
@@ -38,12 +36,6 @@ struct CardView: View {
                 .stroke()
                 .fill(.white.opacity(0.2))
             )
-        }
-//        .navigationDestination(for: NavigationItems.self) { item in
-//            switch item.menu {
-//            case .
-//            }
-//        }
         }
     }
 
