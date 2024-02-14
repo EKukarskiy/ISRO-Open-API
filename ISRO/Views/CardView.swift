@@ -13,7 +13,7 @@ struct CardView: View {
     
     var body: some View {
 
-            VStack(spacing: 12) {
+        VStack(spacing:  12) {
                 Text(item.title.uppercased())
                     .font(.title3)
                     .fontWidth(.expanded)
@@ -21,7 +21,7 @@ struct CardView: View {
                     .multilineTextAlignment(.center)
                     
                 Text(item.description)
-                    .font(.footnote)
+                    .font(.subheadline)
                     .multilineTextAlignment(.center)
                     .opacity(0.7)
                     .frame(maxWidth: .infinity)

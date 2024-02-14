@@ -27,7 +27,7 @@ struct ItemData {
     
     static let navigationItems = [
         NavigationItem(title: "Spacecrafts", description: "List of spacecraft and vehicles launched by ISRO"),
-        NavigationItem(title: "Launchers", description: "Launchers or Launch Vehicles are used to carry spacecraft to space"),
+        NavigationItem(title: "Launchers", description: "Launchers or launch vehicles are used to carry spacecraft to space"),
         NavigationItem(title: "Satellites", description: "A brief information about launched satellites"),
         NavigationItem(title: "Centres", description: "ISRO Centres and Units")
         ]

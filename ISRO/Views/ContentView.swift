@@ -9,36 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //@StateObject var navigationItems = NavigationItem()
-    
     var body: some View {
         
         NavigationStack {
             Grid {
-                GridRow {
-                    NavigationLink(destination: SpacecraftsView()) {
-                        CardView(item: ItemData.navigationItems[0])
+                Group {
+                    GridRow {
+                        NavigationLink(destination: SpacecraftsView()) {
+                            CardView(item: ItemData.navigationItems[0])
+                        }
                     }
-                    .gridCellColumns(2)
+                    
+                    GridRow {
+                        NavigationLink(destination: LaunchersView()) {
+                            CardView(item: ItemData.navigationItems[1])
+                        }
                     }
-                
-                GridRow {
-                    NavigationLink(destination: LaunchersView()) {
-                        CardView(item: ItemData.navigationItems[1])
+                    
+                    GridRow {
+                        NavigationLink(destination: SatellitesView()) {
+                            CardView(item: ItemData.navigationItems[2])
+                        }
                     }
-                    NavigationLink(destination: SatellitesView()) {
-                        CardView(item: ItemData.navigationItems[2])
+                    
+                    GridRow {
+                        NavigationLink(destination: CentresView()) {
+                            CardView(item: ItemData.navigationItems[3])
+                        }
                     }
                 }
-                
-                GridRow {
-                    NavigationLink(destination: CentresView()) {
-                        CardView(item: ItemData.navigationItems[3])
-                    }
-                    .gridCellColumns(2)
-                    }
+                .gridCellColumns(2)
             }
-            .padding(20)
+            .padding([.leading, .bottom, .trailing], 20)
             .navigationTitle("ISRO info")
         }
     }
