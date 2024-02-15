@@ -9,7 +9,13 @@ import SwiftUI
 
 struct LaunchersView: View {
     var body: some View {
-        Text("India has three active operational launch vehicles: Polar Satellite Launch Vehicle (PSLV), Geosynchronous Satellite Launch Vehicle (GSLV), Geosynchronous Satellite Launch Vehicle Mk-III (LVM3)")
+        VStack {
+            Text("India has three active operational launch vehicles: Polar Satellite Launch Vehicle (PSLV), Geosynchronous Satellite Launch Vehicle (GSLV), Geosynchronous Satellite Launch Vehicle Mk-III (LVM3)")
+            
+            List {
+                
+            }
+        }
     }
 }
 

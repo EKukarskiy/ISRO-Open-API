@@ -15,42 +15,32 @@ struct SpacecraftsView: View {
     var body: some View {
         
         VStack {
+            Text("List of spacecraft and vehicles launched by ISRO".uppercased())
+                .padding()
+                .font(.callout)
+                .multilineTextAlignment(.center)
+                .opacity(0.8)
             List {
-                Section {
                     ForEach(network.spacecrafts, id: \.self) { spacecraft in
                         HStack {
                             Text("\(spacecraft.id)")
-                                .frame(maxWidth: 20, maxHeight: 20)
-                                .padding()
-                                .background(.black)
-                                .foregroundStyle(.white)
-                                .clipShape(.rect(cornerRadius: 20))
-                                .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke()
-                                    .fill(.white.opacity(0.2))
-                                )
-                            
-                            
+                                .padding(.horizontal)
                             Text(spacecraft.name)
-                                .frame(maxWidth: .infinity, maxHeight: 20)
-                                .padding()
-                                .background(.black)
-                                .foregroundStyle(.white)
-                                .clipShape(.rect(cornerRadius: 20))
-                                .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke()
-                                    .fill(.white.opacity(0.2))
-                                )
+                            Spacer()
                         }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(.black).opacity(0.95)
+                        .foregroundStyle(.white)
+                        .clipShape(.rect(cornerRadius: 20))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke()
+                                .fill(.white.opacity(0.2))
+                        )
                     }
-                } header: {
-                    Text("List of spacecraft and vehicles launched by ISRO")
-                        .font(.callout)
-                }
             }
-            .listStyle(.inset)
+            .listStyle(.plain)
             
             if network.inProgress {
                 ProgressView()

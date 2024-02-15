@@ -25,8 +25,6 @@ enum NetworkError: Error {
     case decodingError
 }
 
-//async await from AvenCode
-
 private actor ServiceStore {
     
     func loadSpacecrafts() async throws -> [Spacecraft] {
@@ -46,7 +44,6 @@ private actor ServiceStore {
         return spacecrafts
     }
 }
-
 
 final class Network: ObservableObject {
 
