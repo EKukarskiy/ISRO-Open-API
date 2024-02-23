@@ -7,7 +7,8 @@
 
 
 App is based on an open API of Indian Space Research Organisation (ISRO)
-https://github.com/isro/api?tab=readme-ov-file
+
+GitHub: https://github.com/isro/api?tab=readme-ov-file
 
 
 ## Documentation
