@@ -21,7 +21,8 @@ extension Spacecraft {
     static let example = Spacecraft(id: 1001, name: "Soyuz")
 }
 
-//MARK: Model Launchers
+
+//MARK: Model Launchers API
 struct Launcher: Identifiable, Decodable, Hashable {
     let id: String
 }

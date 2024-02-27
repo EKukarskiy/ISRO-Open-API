@@ -10,7 +10,6 @@ import SwiftUI
 struct SpacecraftsView: View {
     
     @StateObject var network = Network()
-    let item = ItemData.navigationItems[0]
     
     var body: some View {
         

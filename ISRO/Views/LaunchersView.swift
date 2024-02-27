@@ -8,12 +8,41 @@
 import SwiftUI
 
 struct LaunchersView: View {
+    
+    @StateObject var network = Network()
+    
     var body: some View {
         VStack {
-            Text("India has three active operational launch vehicles: Polar Satellite Launch Vehicle (PSLV), Geosynchronous Satellite Launch Vehicle (GSLV), Geosynchronous Satellite Launch Vehicle Mk-III (LVM3)")
+            Text("Types of Indian operational launch satellites: \nPolar (PSLV), Geosynchronous (GSLV), Geosynchronous Mk-III (LVM3)".uppercased())
+                .padding()
+                .font(.callout)
+                .multilineTextAlignment(.center)
+                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             
             List {
+                ForEach(network.launchers, id: \.self) {
+                    launcher in
+                    HStack {
+                        Text(launcher.id)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(.black).opacity(0.95)
+                    .foregroundStyle(.white)
+                    .clipShape(.rect(cornerRadius: 20))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke()
+                            .fill(.white.opacity(0.2)))
+                }
             }
+            .listStyle(.plain)
+            if network.inProgress {
+                ProgressView()
+            }
+        }
+        .task {
+            await network.fethcAllLaunchers()
         }
     }
 }

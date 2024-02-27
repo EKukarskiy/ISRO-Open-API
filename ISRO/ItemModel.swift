@@ -25,6 +25,7 @@ struct ItemData {
     
     static let testItem = NavigationItem(title: "Test Item", description: "This is a text for example purposes")
     
+    //use this for titels for each screen
     static let navigationItems = [
         NavigationItem(title: "Spacecrafts", description: "List of spacecraft and vehicles launched by ISRO"),
         NavigationItem(title: "Launchers", description: "Launchers or launch vehicles are used to carry spacecraft to space"),
