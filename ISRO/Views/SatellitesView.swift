@@ -8,10 +8,23 @@
 import SwiftUI
 
 struct SatellitesView: View {
+    
+    @StateObject var network = Network()
+    
     var body: some View {
-        Text("Customer Satellites")
-        
-        Text("In order to fulfil vision and service goals, the Department of space has been developing mainly the satellites for communication, earth observation, scientific, navigation and meteorological purposes.")
+        VStack {
+            Text("List of Customer Satellites".uppercased())
+                .padding()
+                .font(.callout)
+                .multilineTextAlignment(.center)
+                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+            
+            List {
+                
+            }
+            .listStyle(.plain)
+            
+        }
     }
 }
 

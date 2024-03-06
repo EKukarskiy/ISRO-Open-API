@@ -9,7 +9,19 @@ import SwiftUI
 
 struct CentresView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            Text("ISRO centres".uppercased())
+                .padding()
+                .font(.callout)
+                .multilineTextAlignment(.center)
+                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+            
+            List {
+                
+            }
+            .listStyle(.plain)
+        }
     }
 }
 
