@@ -43,7 +43,6 @@ struct ContentView: View {
             .padding([.leading, .bottom, .trailing], 20)
             .navigationTitle("ISRO info")
         }
-        //refactor this using assets: add colors
         .accentColor(Color(.label))
     }
 }

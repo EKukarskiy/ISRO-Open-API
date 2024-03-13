@@ -11,15 +11,7 @@ struct NavigationItem: Identifiable, Hashable {
     var id = UUID()
     var title: String
     var description: String
-    //var menu: Menu
 }
-
-//enum Menu: String {
-//    case spacecrafts
-//    case launchers
-//    case satellites
-//    case centres
-//}
 
 struct ItemData {
     
@@ -31,7 +23,7 @@ struct ItemData {
         NavigationItem(title: "Launchers", description: "Launchers or launch vehicles are used to carry spacecraft to space"),
         NavigationItem(title: "Satellites", description: "A brief information about launched satellites"),
         NavigationItem(title: "Centres", description: "ISRO Centres and Units")
-        ]
+    ]
 }
 
 

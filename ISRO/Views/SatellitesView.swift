@@ -23,7 +23,6 @@ struct SatellitesView: View {
                 
             }
             .listStyle(.plain)
-            
         }
     }
 }

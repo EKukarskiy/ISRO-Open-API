@@ -11,7 +11,7 @@ import SwiftUI
 enum Link {
     case spacecrafts
     case launchers
-    
+
     var url: URL {
         switch self {
         case .spacecrafts:
@@ -29,15 +29,15 @@ enum NetworkError: Error {
 }
 
 private actor ServiceStore {
-    
+
     //Load Spacecrafts
     func loadSpacecrafts() async throws -> [Spacecraft] {
         var spacecrafts = [Spacecraft]()
-        
+
         let (data, response) = try await URLSession.shared.data(from: Link.spacecrafts.url)
         let httpResponse = response as? HTTPURLResponse
         let statusCode = httpResponse?.statusCode ?? 0
-        
+
         if statusCode == 429 {
             throw NetworkError.tooManyRequests
         }
@@ -47,15 +47,15 @@ private actor ServiceStore {
         spacecrafts = decodedQuery.spacecrafts
         return spacecrafts
     }
-    
+
     //Load Launchers
     func loadLaunchers() async throws -> [Launcher] {
         var launchers = [Launcher]()
-        
+
         let (data, response) = try await URLSession.shared.data(from: Link.launchers.url)
         let httpResponse = response as? HTTPURLResponse
         let statusCode = httpResponse?.statusCode ?? 0
-        
+
         if statusCode == 429 {
             throw NetworkError.tooManyRequests
         }
@@ -66,20 +66,19 @@ private actor ServiceStore {
         launchers = decodedQuery.launchers
         return launchers
     }
-    
 }
 
 final class Network: ObservableObject {
 
     @Published var spacecrafts = [Spacecraft]()
     @Published var launchers = [Launcher]()
-    
+
     @Published var inProgress = false
     @Published var showError = false
     @Published var errorMessage = ""
-    
+
     private let store = ServiceStore()
-    
+
     @MainActor func fethcAllSpacecrafts() async {
         inProgress = true
         defer {
@@ -93,7 +92,7 @@ final class Network: ObservableObject {
             showError = true
         }
     }
-    
+
     @MainActor func fethcAllLaunchers() async {
         inProgress = true
         defer {
@@ -107,5 +106,5 @@ final class Network: ObservableObject {
             showError = true
         }
     }
-    
+
 }
