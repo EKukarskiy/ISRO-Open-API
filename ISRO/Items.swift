@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK: Model Spacecraft API
+//MARK: - Model Spacecraft
 struct Spacecraft: Identifiable, Decodable, Hashable {
     let id: Int
     let name: String
@@ -17,12 +17,7 @@ struct SpacecraftQuery: Decodable {
     let spacecrafts: [Spacecraft]
 }
 
-extension Spacecraft {
-    static let example = Spacecraft(id: 1001, name: "Soyuz")
-}
-
-
-//MARK: Model Launchers API
+// MARK: - Model Launchers
 struct Launcher: Identifiable, Decodable, Hashable {
     let id: String
 }
@@ -31,8 +26,31 @@ struct LauncherQuery: Decodable {
     let launchers: [Launcher]
 }
 
-extension Launcher {
-    static let launcherExample = Launcher(id: "Proton M")
+// MARK: - Model Customer Satellites
+struct Satellite: Identifiable, Decodable, Hashable {
+    let id: String
+    let country: String
+    let launch_date: String
+    let mass: String
+    let launcher: String
 }
 
-//MARK: Model Customer Satellites
+struct SatelliteQuery: Decodable {
+    let customer_satellites: [Satellite]
+}
+
+extension Satellite {
+    static let satelliteExample = Satellite(id: "Agile", country: "Italy", launch_date: "23-04-2007", mass: "350", launcher: "PSLV-C8")
+}
+
+// MARK: - Model Centres
+struct Center: Identifiable, Decodable, Hashable {
+    let id: Int
+    let name: String
+    let Place: String
+    let State: String
+}
+
+struct CenterQuery: Decodable {
+    let centres: [Center]
+}

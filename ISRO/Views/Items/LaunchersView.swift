@@ -2,25 +2,26 @@
 //  LaunchersView.swift
 //  ISRO
 //
-//  Created by Evgeniy K on 08.02.2024.
+//  Created by Evgeniy K on 15.04.2024.
 //
 
 import SwiftUI
 
 struct LaunchersView: View {
     
-    @StateObject var network = Network()
+    @StateObject var modelData = ModelData()
     
     var body: some View {
+        
         VStack {
-            Text("Types of Indian operational launch satellites: \nPolar (PSLV), Geosynchronous (GSLV), Geosynchronous Mk-III (LVM3)".uppercased())
-                .padding()
+            Text("Types of launchers: \nPolar (PSLV), Geosynchronous (GSLV), Geosynchronous Mk-III (LVM3)".uppercased())
+                .padding(.bottom)
                 .font(.callout)
                 .multilineTextAlignment(.center)
                 .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             
             List {
-                ForEach(network.launchers, id: \.self) {
+                ForEach(modelData.launchers, id: \.self) {
                     launcher in
                     HStack {
                         Text(launcher.id)
@@ -37,12 +38,13 @@ struct LaunchersView: View {
                 }
             }
             .listStyle(.plain)
-            if network.inProgress {
-                ProgressView()
-            }
         }
         .task {
-            await network.fethcAllLaunchers()
+            do {
+                try await modelData.fetchLauncher()
+            } catch {
+                print(error)
+            }
         }
     }
 }

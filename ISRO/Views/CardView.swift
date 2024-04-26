@@ -13,29 +13,34 @@ struct CardView: View {
 
     var body: some View {
 
-        VStack(spacing:  12) {
-            Text(item.title.uppercased())
-                .font(.title3)
-                .fontWidth(.expanded)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
+        HStack {
 
-            Text(item.description)
-                .font(.subheadline)
-                .multilineTextAlignment(.center)
-                .opacity(0.7)
-                .frame(maxWidth: .infinity)
+            Spacer()
+
+            VStack(spacing:  12) {
+                Text(item.title.uppercased())
+                    .font(.title2)
+                    .fontWidth(.expanded)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+
+                Text(item.description.uppercased())
+                    .font(.callout)
+                    .multilineTextAlignment(.center)
+                    .opacity(0.8)
+            }
+            .padding()
+
+            Spacer()
+
         }
-        .frame(maxHeight: .infinity)
-        .padding().padding(.vertical)
-        .background(.black)
-        .foregroundStyle(.white)
-        .clipShape(.rect(cornerRadius: 20))
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
+        .clipShape(.rect(cornerRadius: 25))
+        .overlay {
+            RoundedRectangle(cornerRadius: 25)
                 .stroke()
-                .fill(.white.opacity(0.2))
-        )
+                .fill()
+        }
+        .padding()
     }
 }
 

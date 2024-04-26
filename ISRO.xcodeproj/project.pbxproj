@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A08663F2BCCEC4C00EE338B /* LaunchersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08663E2BCCEC4C00EE338B /* LaunchersView.swift */; };
+		7A0866412BCCEC7000EE338B /* SatellitesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0866402BCCEC7000EE338B /* SatellitesView.swift */; };
 		7A5A52DF2B78EB51006779A4 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5A52DE2B78EB51006779A4 /* ItemModel.swift */; };
-		7A5B93512B71EB8F00D52244 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B93502B71EB8F00D52244 /* Network.swift */; };
-		7A5B93532B72778300D52244 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B93522B72778300D52244 /* Helpers.swift */; };
+		7A5B93512B71EB8F00D52244 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B93502B71EB8F00D52244 /* NetworkProvider.swift */; };
 		7A5ED70F2B712A3700D3F7C1 /* ISROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5ED70E2B712A3700D3F7C1 /* ISROApp.swift */; };
 		7A5ED7112B712A3700D3F7C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5ED7102B712A3700D3F7C1 /* ContentView.swift */; };
 		7A5ED7132B712A3900D3F7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5ED7122B712A3900D3F7C1 /* Assets.xcassets */; };
 		7A5ED7162B712A3900D3F7C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5ED7152B712A3900D3F7C1 /* Preview Assets.xcassets */; };
 		7A5ED71D2B712AEC00D3F7C1 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5ED71C2B712AEC00D3F7C1 /* Items.swift */; };
 		7A5ED71F2B712E1900D3F7C1 /* SpacecraftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5ED71E2B712E1900D3F7C1 /* SpacecraftsView.swift */; };
-		7A6312FE2B74BB5200AC2157 /* LaunchersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6312FD2B74BB5200AC2157 /* LaunchersView.swift */; };
-		7A6313002B74BB8700AC2157 /* SatellitesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6312FF2B74BB8700AC2157 /* SatellitesView.swift */; };
-		7A6313022B74BB9A00AC2157 /* CentresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6313012B74BB9A00AC2157 /* CentresView.swift */; };
 		7A71FB212B7642E200201E24 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71FB202B7642E200201E24 /* CardView.swift */; };
+		7A973BE12BCEA1FB002A71EC /* CentresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A973BE02BCEA1FB002A71EC /* CentresView.swift */; };
+		7AB9D1B12BBD926B00C8F025 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9D1B02BBD926B00C8F025 /* ModelData.swift */; };
 		7AD8F7532B88E28E00ECF93E /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8F7522B88E28E00ECF93E /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A08663E2BCCEC4C00EE338B /* LaunchersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchersView.swift; sourceTree = "<group>"; };
+		7A0866402BCCEC7000EE338B /* SatellitesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesView.swift; sourceTree = "<group>"; };
 		7A5A52DE2B78EB51006779A4 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
-		7A5B93502B71EB8F00D52244 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		7A5B93522B72778300D52244 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		7A5B93502B71EB8F00D52244 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		7A5ED70B2B712A3700D3F7C1 /* ISRO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISRO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5ED70E2B712A3700D3F7C1 /* ISROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISROApp.swift; sourceTree = "<group>"; };
 		7A5ED7102B712A3700D3F7C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,10 +35,9 @@
 		7A5ED7152B712A3900D3F7C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A5ED71C2B712AEC00D3F7C1 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		7A5ED71E2B712E1900D3F7C1 /* SpacecraftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacecraftsView.swift; sourceTree = "<group>"; };
-		7A6312FD2B74BB5200AC2157 /* LaunchersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchersView.swift; sourceTree = "<group>"; };
-		7A6312FF2B74BB8700AC2157 /* SatellitesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesView.swift; sourceTree = "<group>"; };
-		7A6313012B74BB9A00AC2157 /* CentresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentresView.swift; sourceTree = "<group>"; };
 		7A71FB202B7642E200201E24 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		7A973BE02BCEA1FB002A71EC /* CentresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentresView.swift; sourceTree = "<group>"; };
+		7AB9D1B02BBD926B00C8F025 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		7AD8F7522B88E28E00ECF93E /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +74,8 @@
 			children = (
 				7A5ED70E2B712A3700D3F7C1 /* ISROApp.swift */,
 				7A6313032B74BBD900AC2157 /* Model */,
-				7A5B93502B71EB8F00D52244 /* Network.swift */,
-				7A5B93522B72778300D52244 /* Helpers.swift */,
+				7A5B93502B71EB8F00D52244 /* NetworkProvider.swift */,
+				7AB9D1B02BBD926B00C8F025 /* ModelData.swift */,
 				7A6312FC2B74BB1B00AC2157 /* Views */,
 				7A5ED7122B712A3900D3F7C1 /* Assets.xcassets */,
 				7A5ED7142B712A3900D3F7C1 /* Preview Content */,
@@ -96,10 +96,7 @@
 			children = (
 				7A5ED7102B712A3700D3F7C1 /* ContentView.swift */,
 				7A71FB202B7642E200201E24 /* CardView.swift */,
-				7A5ED71E2B712E1900D3F7C1 /* SpacecraftsView.swift */,
-				7A6312FD2B74BB5200AC2157 /* LaunchersView.swift */,
-				7A6312FF2B74BB8700AC2157 /* SatellitesView.swift */,
-				7A6313012B74BB9A00AC2157 /* CentresView.swift */,
+				7A973BE22BCEB2E1002A71EC /* Items */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,6 +108,17 @@
 				7A5ED71C2B712AEC00D3F7C1 /* Items.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		7A973BE22BCEB2E1002A71EC /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				7A5ED71E2B712E1900D3F7C1 /* SpacecraftsView.swift */,
+				7A08663E2BCCEC4C00EE338B /* LaunchersView.swift */,
+				7A0866402BCCEC7000EE338B /* SatellitesView.swift */,
+				7A973BE02BCEA1FB002A71EC /* CentresView.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +137,8 @@
 			dependencies = (
 			);
 			name = ISRO;
+			packageProductDependencies = (
+			);
 			productName = ISRO;
 			productReference = 7A5ED70B2B712A3700D3F7C1 /* ISRO.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +167,8 @@
 				Base,
 			);
 			mainGroup = 7A5ED7022B712A3700D3F7C1;
+			packageReferences = (
+			);
 			productRefGroup = 7A5ED70C2B712A3700D3F7C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -184,17 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A5B93512B71EB8F00D52244 /* Network.swift in Sources */,
-				7A5B93532B72778300D52244 /* Helpers.swift in Sources */,
+				7A5B93512B71EB8F00D52244 /* NetworkProvider.swift in Sources */,
+				7A973BE12BCEA1FB002A71EC /* CentresView.swift in Sources */,
 				7A5ED71D2B712AEC00D3F7C1 /* Items.swift in Sources */,
-				7A6313022B74BB9A00AC2157 /* CentresView.swift in Sources */,
 				7A5A52DF2B78EB51006779A4 /* ItemModel.swift in Sources */,
+				7A08663F2BCCEC4C00EE338B /* LaunchersView.swift in Sources */,
+				7AB9D1B12BBD926B00C8F025 /* ModelData.swift in Sources */,
 				7A71FB212B7642E200201E24 /* CardView.swift in Sources */,
 				7A5ED7112B712A3700D3F7C1 /* ContentView.swift in Sources */,
 				7A5ED71F2B712E1900D3F7C1 /* SpacecraftsView.swift in Sources */,
-				7A6312FE2B74BB5200AC2157 /* LaunchersView.swift in Sources */,
+				7A0866412BCCEC7000EE338B /* SatellitesView.swift in Sources */,
 				7A5ED70F2B712A3700D3F7C1 /* ISROApp.swift in Sources */,
-				7A6313002B74BB8700AC2157 /* SatellitesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,42 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     var body: some View {
-        
+
         NavigationStack {
-            Grid {
-                Group {
-                    GridRow {
-                        NavigationLink(destination: SpacecraftsView()) {
-                            CardView(item: ItemData.navigationItems[0])
-                        }
-                    }
-                    
-                    GridRow {
-                        NavigationLink(destination: LaunchersView()) {
-                            CardView(item: ItemData.navigationItems[1])
-                        }
-                    }
-                    
-                    GridRow {
-                        NavigationLink(destination: SatellitesView()) {
-                            CardView(item: ItemData.navigationItems[2])
-                        }
-                    }
-                    
-                    GridRow {
-                        NavigationLink(destination: CentresView()) {
-                            CardView(item: ItemData.navigationItems[3])
-                        }
-                    }
-                }
-                .gridCellColumns(2)
+
+            NavigationLink(destination: SpacecraftsView()) {
+                CardView(item: ItemData.navigationItems[0])
             }
-            .padding([.leading, .bottom, .trailing], 20)
+            
+            NavigationLink(destination: LaunchersView()) {
+                CardView(item: ItemData.navigationItems[1])
+            }
+
+            NavigationLink(destination: SatellitesView()) {
+                CardView(item: ItemData.navigationItems[2])
+            }
+
+            NavigationLink(destination: CentresView()) {
+                CardView(item: ItemData.navigationItems[3])
+            }
             .navigationTitle("ISRO info")
+
         }
-        .accentColor(Color(.label))
+        .tint(Color(.label))
     }
 }
 
