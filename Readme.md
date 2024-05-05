@@ -13,7 +13,7 @@ GitHub: https://github.com/isro/api?tab=readme-ov-file
 
 ## Documentation
 
-
+- Generic Network functions
 - REST API
 - Async/await
 - Created with Xcode and SwiftUI

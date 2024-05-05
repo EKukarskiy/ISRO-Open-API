@@ -34,13 +34,14 @@ struct CardView: View {
             Spacer()
 
         }
+        .padding(.vertical)
         .clipShape(.rect(cornerRadius: 25))
         .overlay {
             RoundedRectangle(cornerRadius: 25)
-                .stroke()
+                .stroke(lineWidth: 2.0)
                 .fill()
         }
-        .padding()
+        .padding(.horizontal)
     }
 }
 

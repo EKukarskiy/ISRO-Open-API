@@ -17,6 +17,8 @@
 		7A5ED7162B712A3900D3F7C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5ED7152B712A3900D3F7C1 /* Preview Assets.xcassets */; };
 		7A5ED71D2B712AEC00D3F7C1 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5ED71C2B712AEC00D3F7C1 /* Items.swift */; };
 		7A5ED71F2B712E1900D3F7C1 /* SpacecraftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5ED71E2B712E1900D3F7C1 /* SpacecraftsView.swift */; };
+		7A672EC62BE667CE009507CC /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7A672EC52BE667CE009507CC /* NeedleFoundation */; };
+		7A672EC82BE667CE009507CC /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7A672EC72BE667CE009507CC /* NeedleFoundationTest */; };
 		7A71FB212B7642E200201E24 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71FB202B7642E200201E24 /* CardView.swift */; };
 		7A973BE12BCEA1FB002A71EC /* CentresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A973BE02BCEA1FB002A71EC /* CentresView.swift */; };
 		7AB9D1B12BBD926B00C8F025 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB9D1B02BBD926B00C8F025 /* ModelData.swift */; };
@@ -46,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A672EC82BE667CE009507CC /* NeedleFoundationTest in Frameworks */,
+				7A672EC62BE667CE009507CC /* NeedleFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +135,7 @@
 				7A5ED7072B712A3700D3F7C1 /* Sources */,
 				7A5ED7082B712A3700D3F7C1 /* Frameworks */,
 				7A5ED7092B712A3700D3F7C1 /* Resources */,
+				7AB2D03C2BE7594300792081 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -138,6 +143,8 @@
 			);
 			name = ISRO;
 			packageProductDependencies = (
+				7A672EC52BE667CE009507CC /* NeedleFoundation */,
+				7A672EC72BE667CE009507CC /* NeedleFoundationTest */,
 			);
 			productName = ISRO;
 			productReference = 7A5ED70B2B712A3700D3F7C1 /* ISRO.app */;
@@ -168,6 +175,7 @@
 			);
 			mainGroup = 7A5ED7022B712A3700D3F7C1;
 			packageReferences = (
+				7A672EC42BE667CE009507CC /* XCRemoteSwiftPackageReference "needle" */,
 			);
 			productRefGroup = 7A5ED70C2B712A3700D3F7C1 /* Products */;
 			projectDirPath = "";
@@ -190,6 +198,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AB2D03C2BE7594300792081 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "needle generate ISRO/NeedleGenerated.swift ISRO/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A5ED7072B712A3700D3F7C1 /* Sources */ = {
@@ -414,6 +442,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A672EC42BE667CE009507CC /* XCRemoteSwiftPackageReference "needle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/needle.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A672EC52BE667CE009507CC /* NeedleFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A672EC42BE667CE009507CC /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundation;
+		};
+		7A672EC72BE667CE009507CC /* NeedleFoundationTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A672EC42BE667CE009507CC /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundationTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A5ED7032B712A3700D3F7C1 /* Project object */;
 }

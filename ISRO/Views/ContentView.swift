@@ -30,6 +30,8 @@ struct ContentView: View {
             }
             .navigationTitle("ISRO info")
 
+            Spacer()
+
         }
         .tint(Color(.label))
     }
